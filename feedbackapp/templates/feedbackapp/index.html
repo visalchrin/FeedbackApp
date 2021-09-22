@@ -1,0 +1,104 @@
+{% extends "feedbackapp/layout.html" %}
+{% load static %}
+
+
+{% block hero %}
+  <div class="header__container--caption">
+    <h1>Students' voices <br> need to be listened</h1>
+    <img src="{% static 'feedbackapp/images/heading-graphic.svg' %}" alt="icon-arrow-down">
+  </div>
+{% endblock %}
+
+{% block body %}    
+  <!-- Start features sections -->
+  <section class="features">
+    <div class="features__picture features__pic1">
+      <img src="{% static 'feedbackapp/images/team_meeting.svg' %}" alt="team_meeting">
+    </div>
+    <div class="features__caption features__caption1">
+      <h3>Improve traditional education  <br> to digital education</h3>
+      <p>
+        The digital education system is required digital tool to make education better and effeciency both teaching and learning techniques.
+      </p>
+      <a class="learn-more-yellow" href="#" onclick="return showLoginForm()">Learn more</a>
+    </div>
+    <div class="features__picture features__pic2">
+      <img src="{% static 'feedbackapp/images/designer.svg' %}" alt="designer">
+    </div>
+    <div class="features__caption features__caption2">
+      <h3>Stand out to the right <br> dream and goal</h3>
+      <p>
+        By using our product, you can easily get the right feedback to improve your school and take action to some critical situations in your organization immediately.
+      </p>
+      <a class="learn-more-red" href="#" onclick="return showLoginForm()">Learn more</a>
+    </div>
+    <div class="features__picture features__pic3">
+      <img src="{% static 'feedbackapp/images/creative.svg' %}" alt="creative-image">
+      <div class="caption">
+        <h3>creative Idea</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam saepe repellat odio eius cupiditate odit aliquid nulla error beatae harum.
+        </p>
+      </div>
+    </div>
+    <div class="features__picture features__pic4">
+      <img src="{% static 'feedbackapp/images/share_idea.svg' %}" alt="share-idea">
+      <div class="caption">
+        <h3>Knowledge</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum rerum provident voluptatum delectus aliquid eaque vero ipsa tenetur, repudiandae distinctio?
+        </p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Start testimonail section -->
+  <section class="testimonail">
+    <h2>Client testimonials</h2>
+    <div class="testimonail__container">
+      <div class="testimonail__container-item">
+        <img src="{% static 'feedbackapp/images/image-emily.jpg' %}" alt="Emily">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae itaque praesentium molestias expedita totam ut!
+        </p>
+        <h4>Emily R.</h4>
+        <p class="duty">
+          ABC University Director
+        </p>
+      </div>
+      
+      <div class="testimonail__container-item">
+        <img src="{% static 'feedbackapp/images/image-jennie.jpg' %}" alt="Jennie">
+        <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quaerat eveniet recusandae velit, similique aliquid?
+        </p>
+        <h4>Thomas S.</h4>
+        <p class="duty">
+          Chief Operating Officer
+        </p>
+      </div>
+      
+      <div class="testimonail__container-item">
+        <img src="{% static 'feedbackapp/images/image-thomas.jpg' %}" alt="Thomas">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dicta recusandae! Nemo hic deserunt voluptatibus.
+        </p>
+        <h4>Jennie F.</h4>
+        <p class="duty">
+          Business Owner
+        </p>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Start design section -->
+  <section class="design">
+    <img src="{% static 'feedbackapp/images/smart student.jpg' %}" alt="image-gallery-milkbottles">
+    <img src="{% static 'feedbackapp/images/student-team.jpg' %}" alt="image-gallery-orange">
+    <img src="{% static 'feedbackapp/images/student-voice.jpg' %}" alt="image-gallery-cone">
+    <img src="{% static 'feedbackapp/images/confident student.jpg' %}" alt="image-gallery-sugarcubes">
+  </section>
+
+{% endblock %}

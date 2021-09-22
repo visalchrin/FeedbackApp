@@ -1,0 +1,100 @@
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 350px 350px 350px 350px repeat(2, 450px);
+  grid-template-areas: "caption1" "transform-pic" "caption2" "stand-out" "apple" "orange";
+  align-items: center;
+  justify-items: center;
+
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "caption1 transform-pic" "stand-out caption2" "apple orange";
+    column-gap: 0;
+  }
+
+  &__picture {
+    width: 100%;
+    height: 350px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    img {
+      width: 300px;
+      margin: 0 auto;
+
+      @include breakpoint(medium) {
+        width: 400px;
+      }
+    }
+
+    @include breakpoint(medium) {
+      height: 500px;
+    }
+  }
+
+  &__pic1 {
+    background-color: $Yellow;
+    grid-area: transform-pic;
+  }
+
+  &__pic2 {
+    background-color: $Soft-red;
+    grid-area: stand-out;
+  }
+
+  &__pic3 {
+    background-color: #63cbff;
+    grid-area: apple;
+    height: 450px;
+
+    @include breakpoint(medium) {
+      height: 500px;
+    }
+  }
+
+  &__pic4 {
+    background-color: #89cbbd;
+    grid-area: orange;
+    height: 450px;
+    @include breakpoint(medium) {
+      height: 500px;
+    }
+  }
+
+  &__caption1 {
+    grid-area: caption1;
+  }
+
+  &__caption2 {
+    grid-area: caption2;
+  }
+
+  &__caption {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    h3 {
+      @include breakpoint-less(small) {
+        padding-top: 20px;
+      }
+    }
+    @include breakpoint(medium) {
+      text-align: left;
+      margin-top: 20px;
+      padding: 30px;
+    }
+
+    p {
+      max-width: 307px;
+      padding-bottom: 30px;
+      @include breakpoint(medium) {
+        max-width: 500px;
+        text-align: left;
+      }
+    }
+  }
+}

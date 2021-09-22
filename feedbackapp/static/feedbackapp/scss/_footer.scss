@@ -1,0 +1,64 @@
+.footer {
+  background-color: $Dark-moderate-cyan;
+  &__container {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    @include breakpoint(medium) {
+      max-width: 450px;
+    }
+
+    &-logo {
+      margin-top: 50px;
+    }
+
+    &-links {
+      a {
+        font-size: 1rem;
+        @include breakpoint(medium) {
+          font-size: 1.3rem;
+        }
+        color: $Dark-desaturated-cyan;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+          text-decoration: none;
+          color: $Grayish-blue;
+        }
+      }
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      column-gap: 20px;
+
+      @include breakpoint(medium) {
+        max-width: 400px;
+        grid-template-columns: repeat(4, 80px);
+      }
+    }
+
+    &-social {
+      max-width: 300px;
+      margin: 0 auto;
+      display: grid;
+      padding-bottom: 40px;
+      grid-template-columns: repeat(4, 20px);
+      column-gap: 30px;
+
+      a {
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
