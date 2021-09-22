@@ -1,0 +1,27 @@
+{% extends "feedbackapp/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="container">
+  <div class="about">
+    <h2>About Us</h2>
+    <h3>Mission</h3>
+    <p>We are trying to develop freedom of speech that people should have the equal right.</p>
+    <h3>Vission</h3>
+    <p>We always think that students' voice could make change, they could bring new idea, creative and inovation for the next generation.</p>
+    <div class="about__contact">
+      <form class="about__contact-content" action="#">
+        <label for="email">Enter your email:</label>
+        <input type="email" class="email">
+        <input class="button" type="submit" value="Subscribe Now">
+      </form>
+
+      <div class="about__contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3994180.295098863!2d102.73559569001459!3d12.14177193431496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310787bfd4dc3743%3A0xe4b7bfe089f41253!2sCambodia!5e0!3m2!1sen!2skh!4v1631197963572!5m2!1sen!2skh"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

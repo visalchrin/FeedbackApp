@@ -1,0 +1,38 @@
+.feedback {
+  position: absolute;
+  margin: 20px;
+  z-index: 4000;
+  top: 10%;
+  @include breakpoint(medium) {
+    top: 13%;
+  }
+
+  &__form {
+    display: none;
+    place-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    input {
+      width: 200px;
+    }
+    .button {
+      width: 200px;
+      text-transform: capitalize;
+      background-color: $Dark-blue;
+      border: 2px solid $Dark-blue;
+      color: #ffff;
+
+      &:hover {
+        background-color: $Grayish-blue;
+        text-decoration: none;
+      }
+    }
+    textarea {
+      width: 200px;
+    }
+  }
+}

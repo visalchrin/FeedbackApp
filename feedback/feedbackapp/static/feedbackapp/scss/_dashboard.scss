@@ -1,0 +1,71 @@
+.container-dashboard {
+  background-color: #19536b;
+  padding: 40px;
+
+  @include breakpoint(large) {
+    padding: 70px;
+  }
+
+  .dashboard {
+    background-color: #19536b;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+    max-width: 320px;
+    margin: 0 auto;
+    place-items: center;
+
+    @include breakpoint(medium) {
+      max-width: 1000px;
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__box {
+      max-width: 320px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      padding-bottom: 30px;
+      width: 210px;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+
+      @include breakpoint(medium) {
+        width: 500px;
+      }
+
+      @include breakpoint(large) {
+        width: 270px;
+        height: 270px;
+      }
+      .button {
+        width: 150px;
+        text-transform: capitalize;
+        background-color: $Dark-blue;
+        border: 2px solid $Dark-blue;
+        color: #ffff;
+
+        &:hover {
+          background-color: $Grayish-blue;
+          text-decoration: none;
+        }
+      }
+
+      h4 {
+        color: $Dark-blue;
+        padding-top: 10px;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        align-items: center;
+      }
+    }
+  }
+}

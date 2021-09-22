@@ -1,0 +1,81 @@
+.profile-container {
+  // max-width: 450px;
+  margin: 0 auto;
+  background-color: #19536b;
+  border: #19536b;
+  border: 1px solid #19536b;
+
+  .profile {
+    // position: relative;
+    display: grid;
+    place-items: center;
+    height: 120px;
+    .profile-box {
+      position: relative;
+
+      &__camera {
+        padding: 5px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: rgb(228, 219, 219);
+        transform: translate(75px, 10px);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+        transition: background-color 150ms ease-in-out;
+
+        &:hover {
+          background-color: rosybrown;
+          cursor: pointer;
+        }
+        img {
+          width: 20px;
+          display: grid;
+          place-items: center;
+        }
+      }
+    }
+
+    .profile-image {
+      transform: translateY(50px);
+    }
+
+    &__form-box {
+      background-color: red;
+      border: 1px solid red;
+    }
+  }
+
+  .description {
+    background-color: #ffff;
+    max-width: 300px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 60px;
+    @include breakpoint(medium) {
+      max-width: 400px;
+    }
+
+    a {
+      margin-top: 50px;
+      color: rgb(25, 90, 25);
+    }
+
+    ul {
+      color: $Very-dark-desaturated-blue;
+      text-align: left;
+      li {
+        margin-left: 20px;
+        text-decoration: none;
+        list-style: none;
+        margin-top: 10px;
+        h4 {
+          font-size: $font-title;
+          font-weight: 900;
+          color: black;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.container {
+  background-color: paleturquoise;
+  .about {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: $Dark-blue;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      padding-top: 10px;
+      padding-bottom: 7px;
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    &__contact {
+      padding: 20px;
+      border-radius: 20px;
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+
+      @include breakpoint(medium) {
+        border: 2px solid #ffff;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &-content {
+        display: grid;
+        place-items: center;
+        row-gap: 20px;
+        grid-template-columns: 1fr;
+        // @include breakpoint-less(small) {
+        //   row-gap: 20px;
+        // }
+
+        input[type="submit"] {
+          width: 150px;
+        }
+        .email {
+          width: 200px;
+        }
+      }
+
+      &-map {
+        iframe {
+          border: 1px solid #ffff;
+          border-radius: 20px;
+          width: 320px;
+          height: 200px;
+
+          @include breakpoint(medium) {
+            width: 400px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}

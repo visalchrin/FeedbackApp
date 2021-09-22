@@ -1,0 +1,43 @@
+{% extends "feedbackapp/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="container-dashboard">
+  <div class="dashboard">
+    {% for course in courses %}
+    <!-- feedback form  -->
+      <div class="feedback">
+        <form class="feedback__form" id="{{course.id}}" action="{% url 'feedback' user.username course.course_name %}" method="post">
+          {% csrf_token %}
+          <div class="close-icon">
+            <img src="{% static 'feedbackapp/images/icon-close.svg' %}" alt="close-icon">
+          </div>
+          <p> Feedback On course: {{course.course_name}} </p>
+          <input type="number" min="1" max="5" name="rating" placeholder="Rate (From 1 to 5)">
+          <textarea name="message" id="" cols="30" rows="8" placeholder="Write your feedback here"></textarea>
+          <input type="hidden" value="{{course.id}}" name="courseId">
+          <input type="hidden" value="{{course.Lecturer.id}}" name="lecturerId">
+          <input type="submit" class="button" value="Submit">
+        </form>
+      </div>
+
+      <div class="course dashboard__box" data-course="{{course.course_name}}">
+        <!-- <img src="{% static 'feedbackapp/images/team_meeting.svg' %}" alt="team_meeting"> -->
+        <img  class="profile-image" src="{{ course.course_photo.url }}" alt="course-photo">
+        <h4>Subject: {{ course.course_name }}</h4>
+        <h4> Academic Year: {{ course.academic.academic_year }}</h4>
+        <h4 style="margin-bottom: 30px;"> Lecturer: {{ course.Lecturer.Lecturer_name }}</h4>
+        {% if course.is_feedback %}
+          <h4>Thanks for your feedback.</h4>
+        {% else %}
+          <a href="#" class="button FeedbackBtn " data-courseId="{{course.id}}">Feedback Now</a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block script %}
+  <script type="text/javascript" src="{% static 'feedbackapp/js/dashboard.js' %}"></script>
+{% endblock %}
