@@ -44,7 +44,7 @@
                 <a href="{% url 'about' %}">About Us</a>
                 {% else %}
                 <a href="{% url 'admin_dashboard'%}">Dashboard</a>
-                <a href="#">Course</a>
+                <a href="{% url 'school_admin' %}">Course</a>
                 <a href="{% url 'about' %}">About Us</a>
                 {% endif %}
                 <a class="button" href="{% url 'logout' %}" style="color: red;" class="loginBtn">Logout</a>
@@ -161,7 +161,7 @@
             <a href="{% url 'about' %}">About</a>
             {% else %}
             <a href="{% url 'admin_dashboard'%}">Dashboard</a>
-            <a href="#">Course</a>
+            <a href="{% url 'school_admin' %}">Course</a>
             <a href="{% url 'about' %}">About</a>
             {% endif %}
             <a href="{% url 'logout' %}" class="loginBtn">Logout</a>
