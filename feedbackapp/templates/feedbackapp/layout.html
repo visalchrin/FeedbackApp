@@ -14,7 +14,7 @@
       href="{% static 'feedbackapp/images/favicon-32x32.png' %}"
     />
 
-    <title>Frontend Mentor | Feedback app</title>
+    <title>Feedback app</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
@@ -44,7 +44,7 @@
                 <a href="{% url 'about' %}">About Us</a>
                 {% else %}
                 <a href="{% url 'admin_dashboard'%}">Dashboard</a>
-                <a href="{% url 'school_admin' %}">Course</a>
+                <a href="#">Course</a>
                 <a href="{% url 'about' %}">About Us</a>
                 {% endif %}
                 <a class="button" href="{% url 'logout' %}" style="color: red;" class="loginBtn">Logout</a>

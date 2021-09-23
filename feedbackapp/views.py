@@ -113,18 +113,6 @@ def school_admin(request):
             })
 
 
-# # create course view
-# @login_required(login_url='index')
-# def create_course(request):
-
-#     if request.method == "POST":
-#         newCourseForm = AddNewCourseForm(
-#             request.POST, instance=request.user)
-#         if newCourseForm.is_valid():
-#             newCourseForm.save()
-#         return HttpResponseRedirect(reverse('admin_dashboard'))
-
-
 # create lecturer view
 @login_required(login_url='index')
 def create_lecturer(request):
@@ -290,7 +278,19 @@ def edit_personal(request, username):
             editPersonalForm = EditPersonalForm(
                 request.POST, instance=request.user)
             if editPersonalForm.is_valid():
-                editPersonalForm.save()
+                data = editPersonalForm.cleaned_data
+                first_name = data['first_name']
+                last_name = data['last_name']
+                email = data['email']
+                department = data['department']
+                year = data['year']
+                student = Student.objects.get(user=request.user)
+                student.first_name = first_name
+                student.last_name = last_name
+                student.email = email
+                student.department = department
+                student.year = year
+                student.save()
             return HttpResponseRedirect(reverse('profile', args=(username,)))
         else:
             return render(request, "feedbackapp/message.html", {
