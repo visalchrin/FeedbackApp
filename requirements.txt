@@ -8,5 +8,4 @@ sqlparse==0.4.1
 toml==0.10.2
 whitenoise==5.2.0
 gunicorn
-dj_database_url
 psycopg2
