@@ -24,11 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4^jk45+5n2of!i#-78o+y6z-qn4zh&%7j-makwy*w=8l6t_m51'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 
-# ALLOWED_HOSTS = ['university-feedback.herokuapp.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['university-feedback.herokuapp.com']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
