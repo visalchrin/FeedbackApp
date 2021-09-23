@@ -9,5 +9,4 @@ toml==0.10.2
 whitenoise==5.2.0
 gunicorn
 psycopg2
-cloudinary
-cloudinary_storage
+cloudinary django-cloudinary-storage
